@@ -11,7 +11,13 @@
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <div class="d-flex height-full">
+    <div class="col-2 p-2 color-bg-canvas-inverse color-text-inverse">
+      CHANNELS GO HERE
+    </div>
+    <div class="col-10 p-2">
+      <%= yield %>
+    </div>
+  </div>
+
 </html>
