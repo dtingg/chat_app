@@ -7,4 +7,8 @@ class User < ApplicationRecord
   has_many :memberships
   has_many :channels, through: :memberships
   has_many :created_channels, class_name: "Channel", foreign_key: :user_id
+
+  validates :name, length: { maximum: 80 }, presence: true, uniqueness: true
+  validates :email, length: { maximum: 80 }, presence: true, uniqueness: true
+  validates :bio, length: { maximum: 500 }
 end
